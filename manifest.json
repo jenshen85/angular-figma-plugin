@@ -1,0 +1,10 @@
+{
+  "api": "1.0.0",
+  "editorType": [
+    "figma"
+  ],
+  "id": "{{FIGMA_PLUGIN_ID}}",
+  "name": "{{FIGMA_PLUGIN_NAME}}",
+  "main": "dist/code.js",
+  "ui": "dist/index.html"
+}

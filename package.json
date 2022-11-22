@@ -1,0 +1,34 @@
+{
+  "name": "angular-figma-plugin",
+  "version": "1.0.0",
+  "description": "Template for develop figma plugin with Angular framework",
+  "main": ".hyper.js",
+  "repository": {},
+  "scripts": {
+    "start": "gulp",
+    "plugin-code:watch": "npm run watch --prefix plugin-code",
+    "plugin-ui:watch": "npm run watch --prefix plugin-ui",
+    "watch": "concurrently \"npm run plugin-code:watch\" \"npm run plugin-ui:watch\"",
+    "plugin-code:build:dev": "npm run build:dev --prefix plugin-code",
+    "plugin-ui:build:dev": "npm run build:dev --prefix plugin-ui",
+    "build:dev": "npm run plugin-code:build:dev && npm run plugin-ui:build:dev",
+    "plugin-code:build": "npm run build --prefix plugin-code",
+    "plugin-ui:build": "npm run build --prefix plugin-ui",
+    "build": "npm run plugin-code:build && npm run plugin-ui:build",
+    "plugin-code:install": "cd ./plugin-code && npm install",
+    "plugin-ui:install": "cd ./plugin-ui && npm install",
+    "postinstall": "npm run plugin-code:install && npm run plugin-ui:install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-inline-source-html": "^1.0.3",
+    "gulp-run": "^1.7.1",
+    "gulp-source-exists": "^1.0.2",
+    "through2": "^4.0.2"
+  },
+  "type": "module"
+}
